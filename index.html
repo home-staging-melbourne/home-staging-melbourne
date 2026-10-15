@@ -1,0 +1,1041 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Staging Melbourne | Style Homes Melbourne</title>
+    <meta name="description" content="Style Homes Melbourne helps prepare properties for sale with thoughtful home staging, stylish interiors and welcoming spaces designed to appeal to Melbourne buyers.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#173b35">
+
+    <style>
+        :root {
+            --primary: #173b35;
+            --primary-light: #24584e;
+            --accent: #c99d68;
+            --background: #f5f2eb;
+            --surface: #ffffff;
+            --text: #263530;
+            --muted: #66736d;
+            --border: #e2e6df;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* Header */
+
+        header {
+            background: var(--primary);
+            color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 18px rgba(15, 35, 29, 0.14);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e5c49b;
+        }
+
+        /* Hero section */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 105px 0 110px;
+            background:
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(201, 157, 104, 0.23),
+                    transparent 29%
+                ),
+                radial-gradient(
+                    circle at 5% 90%,
+                    rgba(75, 120, 99, 0.25),
+                    transparent 32%
+                ),
+                linear-gradient(135deg, #e9e7db 0%, #f7f4ec 52%, #dfe9df 100%);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            right: -110px;
+            bottom: -170px;
+            border: 1px solid rgba(23, 59, 53, 0.15);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 30px rgba(23, 59, 53, 0.025),
+                0 0 0 60px rgba(23, 59, 53, 0.025);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 820px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--primary-light);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            color: var(--primary);
+            font-size: clamp(36px, 5.2vw, 60px);
+            line-height: 1.15;
+            letter-spacing: -1.8px;
+            margin-bottom: 25px;
+            max-width: 850px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            color: #46574f;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            background: var(--primary);
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .button:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* General sections */
+
+        section {
+            padding: 78px 0;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            color: var(--primary);
+            font-size: clamp(28px, 4vw, 39px);
+            line-height: 1.25;
+            letter-spacing: -0.7px;
+            margin-bottom: 16px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .content-section {
+            background: var(--surface);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .content-grid h2 {
+            color: var(--primary);
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .content-grid p {
+            margin-bottom: 17px;
+            color: #53615b;
+        }
+
+        .keyword-link {
+            color: var(--primary-light);
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 4px;
+        }
+
+        .keyword-link:hover {
+            color: #a06f3b;
+        }
+
+        .highlight-card {
+            padding: 32px;
+            background: linear-gradient(145deg, #edf1e8, #f8f4eb);
+            border: 1px solid #dce5d9;
+            border-radius: 12px;
+        }
+
+        .highlight-card h3 {
+            color: var(--primary);
+            font-size: 23px;
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+        .highlight-card ul {
+            padding-left: 21px;
+        }
+
+        .highlight-card li {
+            margin-bottom: 12px;
+            color: #53615b;
+        }
+
+        /* Benefits */
+
+        .benefits-section {
+            background:
+                linear-gradient(
+                    180deg,
+                    #f5f2eb 0%,
+                    #eef1e9 100%
+                );
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            padding: 30px 26px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(23, 59, 53, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(23, 59, 53, 0.09);
+        }
+
+        .card-number {
+            display: inline-flex;
+            width: 43px;
+            height: 43px;
+            align-items: center;
+            justify-content: center;
+            background: #e7ede4;
+            color: var(--primary);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 19px;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary);
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* Process */
+
+        .process-section {
+            background: #ffffff;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        .process-item {
+            padding: 26px;
+            border-left: 3px solid var(--accent);
+            background: #faf9f5;
+        }
+
+        .process-item h3 {
+            color: var(--primary);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .process-item p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* Local information */
+
+        .local-section {
+            background: #e8ede5;
+        }
+
+        .local-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .local-content h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: clamp(28px, 4vw, 38px);
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .local-content p {
+            color: #53615b;
+            margin-bottom: 18px;
+        }
+
+        /* FAQs */
+
+        .faq-section {
+            background: var(--background);
+        }
+
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 23px 25px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            font-size: 18px;
+            line-height: 1.45;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* Contact */
+
+        .contact-section {
+            background:
+                radial-gradient(
+                    circle at 100% 0%,
+                    rgba(201, 157, 104, 0.13),
+                    transparent 35%
+                ),
+                linear-gradient(135deg, #ffffff, #edf1e9);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contact-intro h2 {
+            color: var(--primary);
+            font-size: 34px;
+            line-height: 1.3;
+            margin-bottom: 18px;
+        }
+
+        .contact-intro p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 12px 30px rgba(23, 59, 53, 0.06);
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .contact-detail {
+            padding: 14px 0;
+            border-bottom: 1px solid #edf0eb;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-detail:last-child {
+            border-bottom: none;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--primary);
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .contact-detail span,
+        .contact-detail a {
+            color: #59675f;
+            font-size: 15px;
+        }
+
+        .contact-detail a:hover {
+            color: #a06f3b;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #102e29;
+            color: #dce5de;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .footer-brand {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
+        }
+
+        /* Responsive layout */
+
+        @media (max-width: 850px) {
+            .navbar {
+                padding: 18px 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 12px 20px;
+            }
+
+            .content-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid,
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: 92%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                gap: 9px 15px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 65px 0 75px;
+            }
+
+            .hero h1 {
+                letter-spacing: -0.8px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .benefits-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-card,
+            .contact-card {
+                padding: 24px;
+            }
+
+            .content-grid h2,
+            .contact-intro h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">
+                Style Homes Melbourne<span>.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#process">Our Approach</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow">Thoughtful Property Presentation</span>
+
+                    <h1>Home Staging Melbourne for Beautifully Presented Properties</h1>
+
+                    <p>
+                        Preparing a property for sale involves more than cleaning
+                        and arranging furniture. A welcoming, well-presented home
+                        helps potential buyers understand the space, appreciate
+                        its features and imagine how they might live there.
+                        Style Homes Melbourne focuses on thoughtful presentation
+                        and balanced interiors that help properties make a
+                        positive first impression.
+                    </p>
+
+                    <a href="#contact" class="button">
+                        Contact Style Homes Melbourne
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="content-section" id="about">
+            <div class="container content-grid">
+
+                <div>
+                    <h2>Make a Lasting Impression with Home Staging</h2>
+
+                    <p>
+                        First impressions matter when a property enters the
+                        real estate market. Buyers often form an initial opinion
+                        from listing photographs and the moment they walk through
+                        the front door. Clear spaces, coordinated furnishings and
+                        considered styling can help a home feel inviting and
+                        easier to explore.
+                    </p>
+
+                    <p>
+                        Style Homes Melbourne recognises that
+                        every property has its own character. The aim of home
+                        staging is to highlight that character while presenting
+                        rooms in a practical, attractive and easy-to-understand
+                        way. Rather than overcrowding interiors with decorative
+                        pieces, a thoughtful approach focuses on proportion,
+                        light, colour and furniture placement.
+                    </p>
+
+                    <p>
+                        If you are preparing a property for the market, explore
+                        <a class="keyword-link"
+                           href="https://www.housestagingmelbourne.com.au/">
+                            home staging melbourne
+                        </a>
+                        to learn more about presenting interiors for prospective
+                        buyers. Appropriate styling can help define the purpose
+                        of each room, draw attention to useful features and
+                        create a consistent look throughout the property.
+                    </p>
+
+                    <p>
+                        From living areas and bedrooms to dining spaces and
+                        entryways, every part of a home contributes to the
+                        overall viewing experience. A coordinated presentation
+                        helps create a natural flow between rooms while allowing
+                        buyers to focus on the property itself.
+                    </p>
+                </div>
+
+                <aside class="highlight-card">
+                    <h3>What Makes a Well-Staged Home?</h3>
+
+                    <ul>
+                        <li>Furniture arranged to support movement and balance.</li>
+                        <li>Neutral, coordinated colours that feel welcoming.</li>
+                        <li>Clear surfaces and carefully selected accessories.</li>
+                        <li>Rooms presented with a clear and practical purpose.</li>
+                        <li>Attention to natural light and visual space.</li>
+                        <li>A consistent appearance across the property.</li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits-section" id="benefits">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">The Value of Presentation</span>
+                    <h2>Why Consider Home Staging Before Selling?</h2>
+                    <p>
+                        Effective property presentation helps buyers focus on
+                        the features, layout and possibilities of a home.
+                        The right approach can make inspections feel more
+                        organised and listing photographs more cohesive.
+                    </p>
+                </div>
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+                        <span class="card-number">01</span>
+                        <h3>Create a Strong First Impression</h3>
+                        <p>
+                            An organised, welcoming interior can help a property
+                            appear cared for and ready to view. Thoughtful
+                            styling gives buyers a clear introduction to the
+                            home from the entrance onwards.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="card-number">02</span>
+                        <h3>Highlight Room Functionality</h3>
+                        <p>
+                            Furniture placement can show how a room may be used,
+                            whether as a comfortable living area, a dining space
+                            or a practical bedroom. This can make the layout
+                            easier for visitors to understand.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="card-number">03</span>
+                        <h3>Improve Visual Consistency</h3>
+                        <p>
+                            Coordinated colours, suitable furnishings and
+                            restrained accessories help connect different
+                            spaces. A consistent interior can also make
+                            property photographs feel more polished.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="card-number">04</span>
+                        <h3>Make Better Use of Space</h3>
+                        <p>
+                            Removing unnecessary clutter and arranging furniture
+                            carefully can make rooms feel easier to navigate.
+                            Clear walkways allow buyers to appreciate the
+                            available floor space and room proportions.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="card-number">05</span>
+                        <h3>Support Marketing Preparation</h3>
+                        <p>
+                            A well-prepared interior provides a suitable setting
+                            for listing photography and open inspections.
+                            Consistent presentation helps communicate the
+                            property's overall style to potential buyers.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="card-number">06</span>
+                        <h3>Present a More Inviting Home</h3>
+                        <p>
+                            Comfortable furnishings, balanced lighting and
+                            carefully selected details can help a space feel
+                            welcoming without distracting visitors from the
+                            property's key features.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="process-section" id="process">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">A Considered Approach</span>
+                    <h2>Preparing Your Property for the Market</h2>
+                    <p>
+                        A structured approach to styling helps keep the
+                        preparation process focused on the property's layout,
+                        condition and intended presentation.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-item">
+                        <h3>1. Review the Space</h3>
+                        <p>
+                            Begin by assessing the rooms, existing furniture,
+                            natural light and architectural details. Identify
+                            areas that would benefit from decluttering,
+                            rearrangement or a more coordinated appearance.
+                        </p>
+                    </article>
+
+                    <article class="process-item">
+                        <h3>2. Plan the Presentation</h3>
+                        <p>
+                            Consider how each room should function and how the
+                            spaces connect. Choose a balanced styling direction
+                            that complements the property instead of competing
+                            with its original features.
+                        </p>
+                    </article>
+
+                    <article class="process-item">
+                        <h3>3. Refine the Details</h3>
+                        <p>
+                            Focus on furniture positioning, tidy surfaces,
+                            suitable accessories and a consistent colour
+                            palette. Before photography or inspections, review
+                            the property to ensure each room feels ready.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Melbourne section -->
+        <section class="local-section">
+            <div class="container">
+                <div class="local-content">
+                    <h2>Home Staging for Melbourne Properties</h2>
+
+                    <p>
+                        Melbourne has a varied property market, with apartments,
+                        contemporary townhouses, family homes and period
+                        properties all offering different presentation
+                        opportunities. Styling should take the type of home,
+                        its layout and its existing character into account.
+                    </p>
+
+                    <p>
+                        In an apartment, a simple furniture arrangement may help
+                        demonstrate how the living and dining areas work
+                        together. In a family home, presenting bedrooms,
+                        shared living spaces and outdoor connections clearly
+                        can help visitors understand the property's potential.
+                        Older homes may benefit from styling that complements
+                        their original features while keeping the interiors
+                        feeling fresh and uncluttered.
+                    </p>
+
+                    <p>
+                        Lighting and colour also influence how rooms appear.
+                        Keeping walkways open, avoiding oversized furniture
+                        and using accessories selectively can support a more
+                        balanced presentation. These details are especially
+                        useful when preparing rooms for professional
+                        photography and scheduled property inspections.
+                    </p>
+
+                    <p>
+                        Every property is different, so staging decisions
+                        should reflect the home's strengths rather than follow
+                        a single formula. A practical plan can help create
+                        visual harmony while preserving the features that
+                        make the property distinctive.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">Common Questions</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>
+                        Find out more about preparing and presenting a property
+                        before it goes on the market.
+                    </p>
+                </div>
+
+                <div class="faq-list">
+
+                    <article class="faq-item">
+                        <h3>What is home staging?</h3>
+                        <p>
+                            Home staging involves preparing and styling a
+                            property to make its rooms look organised,
+                            welcoming and easy for potential buyers to
+                            understand. It can include furniture arrangement,
+                            decluttering, accessories and colour coordination.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>Why is home staging useful when selling a property?</h3>
+                        <p>
+                            Staging can help highlight the property's layout,
+                            present its features clearly and create a more
+                            cohesive appearance for listing photographs and
+                            inspections. Results vary depending on the
+                            property and the market.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>Does every room need to be staged?</h3>
+                        <p>
+                            Not necessarily. The most suitable approach depends
+                            on the property, its condition and the available
+                            budget. Priority areas often include the entrance,
+                            living room, kitchen, main bedroom and dining area.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>Can existing furniture be used for staging?</h3>
+                        <p>
+                            Yes. Existing furniture may be suitable when it
+                            complements the room and supports the desired
+                            presentation. Rearranging selected pieces and
+                            removing excess items can sometimes make a
+                            noticeable difference.
+                        </p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>When should a property be staged?</h3>
+                        <p>
+                            It is generally helpful to plan staging before
+                            professional listing photography and open
+                            inspections. Allowing time for cleaning, repairs
+                            and furniture arrangements can make preparation
+                            more manageable.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact details -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-grid">
+
+                <div class="contact-intro">
+                    <span class="eyebrow">Get in Touch</span>
+                    <h2>Prepare Your Property for a Better First Impression</h2>
+
+                    <p>
+                        Thoughtful styling can help bring together the different
+                        elements of a property and present its spaces in a
+                        clear, inviting way. Whether you are preparing an
+                        apartment, townhouse or family home for sale, consider
+                        how layout, furnishings and finishing touches can
+                        support the overall presentation.
+                    </p>
+
+                    <p>
+                        Contact Style Homes Melbourne using the details
+                        provided to discuss your property and learn more about
+                        available home staging options.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Business Details</h3>
+
+                    <div class="contact-detail">
+                        <strong>Business Name</strong>
+                        <span>Style Homes Melbourne</span>
+                    </div>
+
+                    <div class="contact-detail">
+                        <strong>Phone Number</strong>
+                        <a href="tel:0400079350">0400 079 350</a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <strong>Address</strong>
+                        <span>
+                            Level 11, 456 Lonsdale Street,
+                            Melbourne, VIC 3000, Australia
+                        </span>
+                    </div>
+
+                    <div class="contact-detail">
+                        <strong>Email</strong>
+                        <a href="mailto:info@housestagingmelbourne.com.au">
+                            info@housestagingmelbourne.com.au
+                        </a>
+                    </div>
+
+                    <div class="contact-detail">
+                        <strong>Website</strong>
+                        <a href="https://www.housestagingmelbourne.com.au/">
+                            https://www.housestagingmelbourne.com.au/
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-brand">
+                Style Homes Melbourne<span>.</span>
+            </p>
+
+            <p>
+                Thoughtful property presentation and home staging in Melbourne.
+            </p>
+
+            <p>
+                &copy; <span id="current-year">2026</span>
+                Style Homes Melbourne. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
